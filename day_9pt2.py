@@ -5,7 +5,7 @@ f = open('files\day9.txt')
 for line in f: ##only one line
     inp = line
 
-#inp = str("{{<!!>},{<!!>},{<!!>},{<!!>}}")
+#inp = str("<{oii!a,<{i<a>")
 ###remove !!!'s
 
 def remove_exc(inp):
@@ -36,11 +36,16 @@ def summation(inp):
     return score
 
 
+def count_garbage(inp):
+    inp = remove_exc(inp)
+    len_st = len(inp)
+    num_matches = len(re.findall('<.*?>',inp))
+    inp = remove_garbage(inp)
+    garbage_chars = (len_st - len(inp)) - 2 * num_matches
+    return garbage_chars
 
 
-a = remove_exc(inp)
-b = remove_garbage(a)
-print(b)
 
-c = processing(inp)
+
+c = count_garbage(inp)
 print(c)
