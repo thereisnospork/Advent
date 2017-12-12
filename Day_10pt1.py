@@ -23,7 +23,7 @@ def hash_circle(num_arr, instr, cp = 0, skip_size = 0, len_init = 256):
         stack_num_arr = np.hstack((num_arr,num_arr))
 
         flip = np.flip(stack_num_arr[start_index : end_index], axis = 0)
-        print([start_index, end_index])
+       # print([start_index, end_index])
         for index, value in enumerate(flip):
             num_arr[(start_index + index) % len(num_arr)] = value
            # print(num_arr)
