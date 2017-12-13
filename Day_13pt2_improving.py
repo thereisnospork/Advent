@@ -1,5 +1,7 @@
 import re
 import numpy as np
+from timeit import default_timer as timer
+start = timer()
 
 in_arr = np.genfromtxt('files\Day13.txt', delimiter=',', dtype='int')
 in_arr = in_arr.transpose()
@@ -32,6 +34,7 @@ def traversal (d_h, delay):
 def pos_scanner(timer, height):
     pos = 0
     up_down = 1
+    timer = timer% (2*height - 2)
     for n in range(timer):
         pos = pos + up_down
         if pos == height -1:
@@ -57,9 +60,8 @@ def find_min_delay(d_h):
 
 
 
-
 a = find_min_delay(in_arr)
-#b = pos_scanner(6,4)
+end = timer()
 
 assert (pos_scanner(6,4) == True)
 assert(pos_scanner(2,2) == True)
@@ -68,5 +70,5 @@ assert(pos_scanner(99,2) == False)
 assert(pos_scanner(12,4)==True)
 
 
-b = pos_scanner(99,4)
 print(a)
+print(end-start)
