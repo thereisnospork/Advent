@@ -1,10 +1,10 @@
 import numpy as np
-from timeit import default_timer as timer
-start = timer()
+# from timeit import default_timer as timer
+# start = timer()
 #print(in_deque)
-
-raw_inst = "230,1,2,221,97,252,168,169,57,99,0,254,181,255,235,167"
-in_test = [0,1,2,3,4]
+#
+# raw_inst = "230,1,2,221,97,252,168,169,57,99,0,254,181,255,235,167"
+# in_test = [0,1,2,3,4]
 
 
 # in_arr = np.zeros(256, dtype='int')
@@ -98,11 +98,11 @@ def knot_hash(raw_input):
     return hex_hashed
 
 ##########EXECUTE##########
-
-a = knot_hash("230,1,2,221,97,252,168,169,57,99,0,254,181,255,235,167")
-#a = knot_hash('1,2,3')
-print(a)
-print(len(a))
+#
+# a = knot_hash("230,1,2,221,97,252,168,169,57,99,0,254,181,255,235,167")
+# #a = knot_hash('1,2,3')
+# print(a)
+# print(len(a))
 
 # b = knot_hash(raw_input='raw_inst')
 # print(b)
@@ -115,14 +115,14 @@ print(len(a))
 # sparse_hashed = hash_circle_rpted([in_arr,0,0], instructions, n=60)
 # b = dense_hash(sparse_hashed)
 # print(b)
-
-
-
-end = timer()
-
-test_sparse_slice = [65,27,9,1,4,3,40,50,91,7,6,0,2,5,68,22]
 #
-assert(bitwise_XOR_of_slice(test_sparse_slice)==64)
+#
+#
+# end = timer()
+#
+# test_sparse_slice = [65,27,9,1,4,3,40,50,91,7,6,0,2,5,68,22]
+# #
+# assert(bitwise_XOR_of_slice(test_sparse_slice)==64)
 assert(knot_hash('AoC 2017')=='33efeb34ea91902bb2f59c9920caa6cd')
 assert(knot_hash('')=='a2582a3a0e66e6e86e3812dcb672a272')
 
@@ -140,6 +140,6 @@ assert(knot_hash('')=='a2582a3a0e66e6e86e3812dcb672a272')
 #     cp = cp - len_init
 #     flag = False
 
-
-
-print(str(end-start)+' seconds elapsed')
+#
+#
+# print(str(end-start)+' seconds elapsed')
